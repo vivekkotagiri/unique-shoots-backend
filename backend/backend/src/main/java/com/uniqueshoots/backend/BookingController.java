@@ -6,7 +6,7 @@ import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/bookings")
 @CrossOrigin(origins = "*") // Allows your HTML frontend to communicate with this backend
 public class BookingController {
 
