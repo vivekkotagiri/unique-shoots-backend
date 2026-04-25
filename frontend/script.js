@@ -67,7 +67,7 @@ function handleFormSubmit(event) {
     // Send the data to your Render Backend
  
 // Send the data to your Render Backend
-fetch("https://unique-shoots-backend-nt6p.onrender.com/api/bookings/submit", { // Changed 'contact' to 'submit'
+fetch("https://unique-shoots-backend-nt6p.onrender.com/api/booking/submit", { // Changed 'contact' to 'submit'
     method: 'POST',
     headers: {
         'Content-Type': 'application/json'
