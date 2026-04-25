@@ -65,7 +65,10 @@ function handleFormSubmit(event) {
     submitBtn.disabled = true;
 
     // Send the data to your Render Backend
-    fetch("https://unique-shoots-backend.onrender.com/api/contact", {
+            // JavaScript update
+fetch("https://unique-shoots-backend-nt6p.onrender.com/api/bookings/contact", {
+    // ...
+    // ... rest of your code
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
