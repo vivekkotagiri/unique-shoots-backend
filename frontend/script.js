@@ -65,23 +65,23 @@ function handleFormSubmit(event) {
     submitBtn.disabled = true;
 
     // Send the data to your Render Backend
-            // JavaScript update
-fetch("https://unique-shoots-backend-nt6p.onrender.com/api/booking/contact", {
-    // ...
-    // ... rest of your code
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            clientName: bookingData.name,
-            clientPhone: bookingData.phone,
-            eventType: bookingData.eventType,
-            eventDate: bookingData.date,
-            eventAddress: bookingData.address,
-            selectedPackage: bookingData.package
-        })
+ 
+// Send the data to your Render Backend
+fetch("https://unique-shoots-backend-nt6p.onrender.com/api/booking/submit", { // Changed 'contact' to 'submit'
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+        clientName: bookingData.name,
+        clientPhone: bookingData.phone,
+        eventType: bookingData.eventType,
+        eventDate: bookingData.date,
+        eventAddress: bookingData.address,
+        selectedPackage: bookingData.package
     })
+})
+
     .then(response => {
         if (response.ok) {
             alert("Success! Your booking request has been recorded. We will WhatsApp you shortly.");
