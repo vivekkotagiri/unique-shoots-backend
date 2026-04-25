@@ -36,7 +36,7 @@ function selectPackage(packageName, price) {
     document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
-// 3. Form Submission Handler (Prepares data for Spring Boot)
+// 3. Form Submission Handler
 function handleFormSubmit(event) {
     event.preventDefault(); // Prevents the page from refreshing
 
@@ -44,7 +44,6 @@ function handleFormSubmit(event) {
     const selectedPackage = document.getElementById('selectedPackageName').value;
     if (!selectedPackage) {
         alert("Please select a package (Starter or Extended) before submitting!");
-        // Scroll back up to pricing
         document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' });
         return;
     }
@@ -59,19 +58,18 @@ function handleFormSubmit(event) {
         package: selectedPackage
     };
 
-    // Change button text to show it's working
+    // UI Loading State
     const submitBtn = document.querySelector('.submit-btn');
     const originalText = submitBtn.innerText;
     submitBtn.innerText = "Processing Booking...";
     submitBtn.disabled = true;
 
-    // Send the real data to your Spring Boot Backend
+    // Send the data to your Render Backend
     fetch("https://unique-shoots-backend.onrender.com/api/contact", {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        // We make sure the variable names match the Java Booking.java file EXACTLY
         body: JSON.stringify({
             clientName: bookingData.name,
             clientPhone: bookingData.phone,
@@ -84,7 +82,8 @@ function handleFormSubmit(event) {
     .then(response => {
         if (response.ok) {
             alert("Success! Your booking request has been recorded. We will WhatsApp you shortly.");
-            // Reset form
+            
+            // Reset the form and UI
             document.getElementById('bookingForm').reset();
             const cards = document.querySelectorAll('.pricing-card');
             cards.forEach(card => card.classList.remove('selected'));
@@ -99,7 +98,8 @@ function handleFormSubmit(event) {
         alert("Server is currently offline. Please contact us directly on Instagram.");
     })
     .finally(() => {
+        // Put the button back to normal
         submitBtn.innerText = originalText;
         submitBtn.disabled = false;
     });
-}
+} // <--- THIS WAS THE MISSING BRACKET!
