@@ -66,7 +66,7 @@ function handleFormSubmit(event) {
     submitBtn.disabled = true;
 
     // Send the real data to your Spring Boot Backend
-    fetch('http://localhost:8080/api/bookings/submit', {
+    fetch("https://unique-shoots-backend.onrender.com/api/contact", {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
