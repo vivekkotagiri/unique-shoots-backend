@@ -66,7 +66,7 @@ function handleFormSubmit(event) {
 
     // Send the data to your Render Backend
             // JavaScript update
-fetch("https://unique-shoots-backend-nt6p.onrender.com/api/bookings/contact", {
+fetch("https://unique-shoots-backend-nt6p.onrender.com/api/booking/contact", {
     // ...
     // ... rest of your code
         method: 'POST',
