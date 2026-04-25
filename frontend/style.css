@@ -1,0 +1,295 @@
+/* Core Variables */
+:root {
+    --bg-dark: #0a0a0c;
+    --bg-darker: #050505;
+    --accent-red: #ff2a2a; /* Matches your logo's red S */
+    --gradient-1: #ff2a2a;
+    --gradient-2: #ff7b00;
+    --text-main: #ffffff;
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.08);
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Typography & Logo Styles */
+.brand-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #fff;
+}
+
+.brand-accent {
+    color: var(--accent-red);
+    font-size: 1.8rem;
+    font-style: italic;
+    font-family: 'Brush Script MT', cursive; /* Mimics handwritten style */
+}
+
+.text-gradient {
+    background: linear-gradient(90deg, var(--gradient-1), var(--gradient-2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+/* Navigation - React-like scroll effect */
+.navbar {
+    transition: all 0.3s ease;
+    padding: 1.5rem 0;
+}
+
+
+.nav-link {
+    color: white !important;
+    opacity: 0.8; /* This makes it slightly softer white */
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #ff4d00 !important; /* This makes it turn orange when you hover! */
+    opacity: 1;
+}
+
+
+.delivery-badge {
+    background-color: white !important;
+    color: red !important;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.navbar.scrolled {
+    padding: 0.8rem 0;
+    background: rgba(10, 10, 12, 0.85);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--glass-border);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #fff;
+}
+
+.logo-img {
+    object-fit: contain;
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    padding-top: 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.py-6 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.bg-darker {
+    background-color: var(--bg-darker);
+}
+
+/* Decorative Glow Orbs */
+.glow-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    z-index: -1;
+    opacity: 0.4;
+}
+
+.orb-1 {
+    width: 400px;
+    height: 400px;
+    background: var(--accent-red);
+    top: -100px;
+    right: -100px;
+}
+
+.orb-2 {
+    width: 300px;
+    height: 300px;
+    background: var(--gradient-2);
+    bottom: 10%;
+    left: -100px;
+}
+
+/* Buttons */
+.btn-brand-gradient {
+    background: linear-gradient(45deg, var(--gradient-1), var(--gradient-2));
+    color: white;
+    border: none;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-brand-gradient:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 42, 42, 0.3);
+    color: white;
+}
+
+/* Glassmorphism Cards */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Pricing Cards Specifics */
+.pricing-card {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(255, 42, 42, 0.3);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.pricing-card.selected {
+    border: 2px solid var(--accent-red);
+    box-shadow: 0 0 30px rgba(255, 42, 42, 0.15);
+    background: rgba(255, 42, 42, 0.05);
+}
+
+.pricing-card.selected .btn-select {
+    background: linear-gradient(45deg, var(--gradient-1), var(--gradient-2));
+    color: white;
+    border: none;
+}
+
+.popular-badge {
+    position: absolute;
+    top: 20px;
+    right: -35px;
+    background: linear-gradient(45deg, var(--gradient-1), var(--gradient-2));
+    color: white;
+    padding: 5px 40px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    transform: rotate(45deg);
+}
+
+.price-tag .amount {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.feature-list li {
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Custom Form Inputs */
+.custom-input {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 0.8rem 1rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.custom-input:focus {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--accent-red);
+    box-shadow: 0 0 0 0.25rem rgba(255, 42, 42, 0.25);
+    color: white;
+}
+
+.custom-input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* Fix dropdown options for dark mode */
+select.custom-input option {
+    background-color: var(--bg-dark);
+    color: white;
+}
+
+.custom-alert {
+    background: rgba(255, 42, 42, 0.1);
+    border: 1px solid var(--accent-red);
+    color: white;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .display-3 {
+        font-size: 2.5rem;
+    }
+    
+    .w-sm-100 {
+        width: 100%;
+    }
+    
+    .pricing-card {
+        margin-bottom: 1rem;
+    }
+
+    .form-card {
+        padding: 2rem 1.5rem !important;
+    }
+}
+
+
+.who-can-book-banner {
+    width: 100%;
+    
+    /* On PC, we want the 16:9 cinematic look */
+    aspect-ratio: 16 / 9; 
+    
+    /* Replace with your actual image path */
+    background-image: url('unique\ shoots\ banner.png');
+    
+    /* This is the secret: center center keeps your 'Safe Zone' visible */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Tablet Adjustments */
+@media (max-width: 992px) {
+    .who-can-book-banner {
+        aspect-ratio: 4 / 3; /* Becomes a bit taller for better visibility */
+        border-radius: 10px;
+    }
+}
+
+/* Mobile Specific Adjustments */
+@media (max-width: 576px) {
+    .who-can-book-banner {
+        /* On phones, we make it even taller so the center text is large */
+        aspect-ratio: 3 / 4; 
+        background-size: cover;
+        border-radius: 8px;
+    }
+}

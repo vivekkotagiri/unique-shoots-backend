@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniqueShoots | Instant Reels & Videography</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="Unique.png" alt="UniqueShoots Logo" width="45" height="45" class="me-2 rounded logo-img">
+                <span class="brand-text">Unique<span class="brand-accent">S</span>hoots</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-toggle="target" aria-controls="navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#book">Occasions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pricing">Packages</a></li>
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0"><a class="btn btn-brand-gradient px-4 py-2" href="#book">Book Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section d-flex align-items-center">
+        <div class="container text-center text-lg-start">
+            <div class="row align-items-center">
+                <div class="col-lg-7 text-center text-lg-start">
+                    <span class="badge bg-white text-dark shadow-sm px-3 py-2" style="border-radius: 8px; font-weight: 700;">
+    Same-Day Delivery Guaranteed
+</span>
+
+                    <h1 class="display-3 fw-bold mb-4 fade-in-up delay-1">Instant Reels for <br><span class="text-gradient">Unforgettable Moments</span></h1>
+                    <p class="lead mb-5 text-light opacity-75 fade-in-up delay-2">We shoot, we edit, and we deliver your premium vertical videos on the exact same day. Perfect for Instagram and YouTube.</p>
+                    <div class="fade-in-up delay-3">
+                        <a href="#book" class="btn btn-brand-gradient btn-lg px-5 py-3 me-md-3 mb-3 w-sm-100">Secure Your Date</a>
+                        <a href="#pricing" class="btn btn-outline-light btn-lg px-5 py-3 mb-3 w-sm-100">View Packages</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+    </header>
+
+
+<div class="container-fluid px-0 px-md-3 my-5">
+    <div class="row justify-content-center mx-0">
+        <div class="col-12 col-xl-11">
+            <div class="who-can-book-banner fade-in-up">
+                </div>
+        </div>
+    </div>
+</div>
+
+
+    
+    <section id="pricing" class="py-6">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">Choose Your <span class="text-gradient">Vibe</span></h2>
+                <p class="text-light opacity-75">Transparent pricing. No hidden fees. Instant delivery.</p>
+            </div>
+            
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-5">
+                    <div class="glass-card pricing-card h-100" id="pkg-starter" onclick="selectPackage('Starter', 1199)">
+                        <div class="card-body p-5">
+                            <h3 class="card-title h4 mb-3">The Starter Shoot</h3>
+                            <div class="price-tag mb-4">
+                                <span class="currency">₹</span><span class="amount text-gradient">1,199</span>
+                            </div>
+                            <p class="text-light opacity-75 mb-4 border-bottom border-secondary pb-4">2 Hours of On-Site Coverage</p>
+                            <ul class="feature-list list-unstyled mb-5">
+                                <li><i class="icon-check"></i> Dedicated Videographer</li>
+                                <li><i class="icon-check"></i> 1 Professionally Edited Reel</li>
+                                <li><i class="icon-check"></i> Color Grading & Trending Audio</li>
+                                <li><i class="icon-check text-danger"></i> <strong>Same-Day Delivery</strong></li>
+                            </ul>
+                            <button class="btn btn-brand-gradient w-100 py-2 btn-select">Select Package</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-5">
+                    <div class="glass-card pricing-card featured h-100" id="pkg-extended" onclick="selectPackage('Extended', 2999)">
+                        <div class="popular-badge">Most Popular</div>
+                        <div class="card-body p-5">
+                            <h3 class="card-title h4 mb-3">The Extended Event</h3>
+                            <div class="price-tag mb-4">
+                                <span class="currency">₹</span><span class="amount text-gradient">2,999</span>
+                            </div>
+                            <p class="text-light opacity-75 mb-4 border-bottom border-secondary pb-4">5 Hours of On-Site Coverage</p>
+                            <ul class="feature-list list-unstyled mb-5">
+                                <li><i class="icon-check"></i> Comprehensive Event Coverage</li>
+                                <li><i class="icon-check"></i> 2 Professionally Edited Reels</li>
+                                <li><i class="icon-check"></i> Advanced Transitions & Effects</li>
+                                <li><i class="icon-check text-danger"></i> <strong>Same-Day Delivery</strong></li>
+                            </ul>
+                            <button class="btn btn-brand-gradient w-100 py-2 btn-select">Select Package</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="book" class="py-6 bg-darker position-relative">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="glass-card form-card p-4 p-md-5">
+                        <div class="text-center mb-5">
+                            <h2 class="fw-bold mb-2">Lock in Your Shoot</h2>
+                            <p class="text-light opacity-75">Fill out the details below. We will confirm your slot via WhatsApp instantly.</p>
+                            <div id="selected-package-alert" class="alert custom-alert d-none mt-3" role="alert">
+                                Selected: <strong id="display-package">None</strong>
+                            </div>
+                        </div>
+
+                        <form id="bookingForm" onsubmit="handleFormSubmit(event)">
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <label class="form-label text-light opacity-75">Full Name</label>
+                                    <input type="text" class="form-control custom-input" id="clientName" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-light opacity-75">Phone Number (WhatsApp)</label>
+                                    <input type="tel" class="form-control custom-input" id="clientPhone" placeholder="+91 " required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-light opacity-75">Event Type</label>
+                                    <select class="form-select custom-input" id="eventType" required>
+                                        <option value="" selected disabled>Choose Occasion...</option>
+                                        <option>Wedding / Pre-Wedding</option>
+                                        <option>Birthday Party</option>
+                                        <option>New Product Launch</option>
+                                        <option>Personal Shoot</option>
+                                        <option>Corporate Event</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-light opacity-75">Event Date</label>
+                                    <input type="date" class="form-control custom-input" id="eventDate" required>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label text-light opacity-75">Venue Address</label>
+                                    <input type="text" class="form-control custom-input" id="eventAddress" placeholder=" Occasion Place" required>
+                                </div>
+                                
+                                <input type="hidden" id="selectedPackageName" required>
+
+                                <div class="col-12 mt-5">
+                                    <button type="submit" class="btn btn-brand-gradient btn-lg w-100 py-3 shadow-lg submit-btn">
+                                        Submit Booking Request
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-4 text-center border-top border-secondary">
+        <p class="mb-0 text-light opacity-50">&copy; 2026 UniqueShoots. All rights reserved. Made with ❤</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
