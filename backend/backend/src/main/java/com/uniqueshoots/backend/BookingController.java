@@ -1,6 +1,7 @@
 package com.uniqueshoots.backend;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.web.bind.annotation.*;
@@ -16,16 +17,11 @@ public class BookingController {
     @Autowired
     private JavaMailSender mailSender;
 
-    @PostMapping("/submit")
-    public String submitBooking(@RequestBody Booking booking) {
-        
-        // 1. Save the client details to your Oracle Database
+   @PostMapping("/submit")
+    public ResponseEntity<String> submitBooking(@RequestBody Booking booking) {
         bookingRepository.save(booking);
-
-        // 2. Fire the instant email notification
         sendEmailNotification(booking);
-
-        return "Booking Saved and Notification Sent!";
+        return ResponseEntity.ok("Booking Saved Successfully");
     }
 
     private void sendEmailNotification(Booking booking) {

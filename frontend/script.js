@@ -67,8 +67,9 @@ function handleFormSubmit(event) {
     // Send the data to your Render Backend
  
 // Send the data to your Render Backend
-fetch("https://unique-shoots-backend-nt6p.onrender.com/api/booking/submit", { // Changed 'contact' to 'submit'
+fetch("https://unique-shoots-backend-nt6p.onrender.com/api/booking/submit", {
     method: 'POST',
+    mode: 'cors', // Add this line explicitly
     headers: {
         'Content-Type': 'application/json'
     },
@@ -81,7 +82,6 @@ fetch("https://unique-shoots-backend-nt6p.onrender.com/api/booking/submit", { //
         selectedPackage: bookingData.package
     })
 })
-
     .then(response => {
         if (response.ok) {
             alert("Success! Your booking request has been recorded. We will WhatsApp you shortly.");
