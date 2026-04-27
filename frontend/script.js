@@ -96,10 +96,22 @@ fetch("https://unique-shoots-backend-nt6p.onrender.com/api/booking/submit", {
             alert("Oops! Something went wrong. Please try again.");
         }
     })
-    .catch(error => {
-        console.error('Error:', error);
-        alert("Server is currently offline. Please contact us directly on Instagram.");
-    })
+    // .catch(error => {
+    //     console.error('Error:', error);
+    //     alert("Server is currently offline. Please contact us directly on Instagram.");
+    // })
+
+
+.catch(error => {
+    console.error('Error:', error);
+    // Instead of a boring error, give them a direct link to your WhatsApp/Instagram
+    const retry = confirm("Our automated system is under maintenance. Would you like to message us directly on WhatsApp to secure your booking?");
+    if (retry) {
+        window.location.href = "https://wa.me/9182002902"; // Replace with your WhatsApp number
+    }
+})
+
+
     .finally(() => {
         // Put the button back to normal
         submitBtn.innerText = originalText;
