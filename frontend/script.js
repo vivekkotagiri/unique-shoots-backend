@@ -105,4 +105,4 @@ fetch("https://unique-shoots-backend-nt6p.onrender.com/api/booking/submit", {
         submitBtn.innerText = originalText;
         submitBtn.disabled = false;
     });
-} // <--- THIS WAS THE MISSING BRACKET!
+} 
